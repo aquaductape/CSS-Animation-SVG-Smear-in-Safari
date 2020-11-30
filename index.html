@@ -9,9 +9,47 @@
 </head>
 
 <body>
-  <div class="cell">
+  <div class="cell"></div>
+  <div class="svg-defs">
+    <svg xmlns="http://www.w3.org/2000/svg" class="defs-collection" height="0" width="0" viewBox="0 0 32 32">
+      <defs>
+        <filter id="drop-shadow-filter" height="100" width="100" filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="1" flood-color="rgba(0, 0, 0, 0.35)" result="flood"></feFlood>
+          <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
+          <feGaussianBlur in="composite1" result="blur"></feGaussianBlur>
+          <feOffset dy="1.8" result="offset"></feOffset>
+          <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
+        </filter>
+        <filter id="drop-shadow-filter-slash" height="100" width="100" filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="1" flood-color="rgba(0, 0, 0, 0.35)" result="flood"></feFlood>
+          <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
+          <feGaussianBlur in="composite1" result="blur"></feGaussianBlur>
+          <feOffset dy="0.7" result="offset"></feOffset>
+          <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
+        </filter>
+        <linearGradient id="b-cross-P1">
+          <stop class="color-primary-cross-P1" offset="0" stop-color="#0cf"></stop>
+          <stop class="color-secondary-cross-P1" offset="1" stop-color="#5fd"></stop>
+        </linearGradient>
+        <linearGradient id="a-cross-P1">
+          <stop class="color-secondary-cross-P1" offset="0" stop-color="#5fd"></stop>
+          <stop class="color-primary-cross-P1" offset="1" stop-color="#0cf"></stop>
+        </linearGradient>
+        <linearGradient gradientUnits="userSpaceOnUse" y2="19.9728" x2="6.4856" y1="13.2292" x1="13.2292"
+          id="d-cross-P1" xlink:href="#a-cross-P1"></linearGradient>
+        <linearGradient gradientUnits="userSpaceOnUse" y2="22.7431" x2="21.9646" y1="11.6221" x1="11.6221"
+          id="c-cross-P1" xlink:href="#b-cross-P1"></linearGradient>
+        <linearGradient id="a-crossLeftDot-P1">
+          <stop class="color-primary-crossLeftDot-P1" stop-color="#0cf"></stop>
+        </linearGradient>
+        <linearGradient id="a-crossRightDot-P1">
+          <stop class="color-secondary-crossRightDot-P1" stop-color="#5fd"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
-  <div class="svg-defs"></div>
   <script src="main.js"></script>
 </body>
 

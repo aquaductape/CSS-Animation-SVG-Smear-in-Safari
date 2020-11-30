@@ -60,50 +60,6 @@
   }
 }
 
-@-webkit-keyframes Triangle-Second-Line-A {
-  0% {
-    opacity: 1;
-    stroke-dashoffset: 950px;
-  }
-  100% {
-    stroke-dashoffset: 900px;
-    opacity: 1;
-  }
-}
-
-@keyframes Triangle-Second-Line-A {
-  0% {
-    opacity: 1;
-    stroke-dashoffset: 950px;
-  }
-  100% {
-    stroke-dashoffset: 900px;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes Triangle-First-Line-A {
-  0% {
-    opacity: 1;
-    stroke-dashoffset: 60px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-    opacity: 1;
-  }
-}
-
-@keyframes Triangle-First-Line-A {
-  0% {
-    opacity: 1;
-    stroke-dashoffset: 60px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-    opacity: 1;
-  }
-}
-
 @-webkit-keyframes Right-Dot-A {
   0% {
     opacity: 1;
@@ -156,28 +112,6 @@
   }
 }
 
-@-webkit-keyframes Heart-A {
-  0% {
-    opacity: 1;
-    stroke-dashoffset: 50px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-    opacity: 1;
-  }
-}
-
-@keyframes Heart-A {
-  0% {
-    opacity: 1;
-    stroke-dashoffset: 50px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-    opacity: 1;
-  }
-}
-
 .cell {
   position: relative;
   width: 100px;
@@ -212,6 +146,8 @@ svg .animate__third-line {
   opacity: 0;
   stroke-dasharray: 50;
   stroke-dashoffset: 50;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 svg .animate__second-line {
@@ -221,6 +157,8 @@ svg .animate__second-line {
           animation-delay: 0.3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 svg .animate__third-line {
@@ -230,6 +168,8 @@ svg .animate__third-line {
           animation-delay: 0.6s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 svg .animate__first-line {
@@ -237,6 +177,8 @@ svg .animate__first-line {
           animation: Triangle-First-Line-A 0.4s cubic-bezier(0, 0.28, 0.9, 0.65);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 svg .animate__right-dot {
@@ -248,6 +190,8 @@ svg .animate__right-dot {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   /*-> -90deg*/
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 svg .animate__left-dot {
@@ -259,6 +203,8 @@ svg .animate__left-dot {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   /*-> -90deg*/
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 svg .animate__left-line,
@@ -272,6 +218,8 @@ svg .animate__right-line {
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 svg .animate__circle-left,
@@ -282,14 +230,7 @@ svg .animate__circle-right {
           animation: Circle-A 1s cubic-bezier(0.4, 0, 0.58, 1);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-svg .animate__heart {
-  stroke-dasharray: 50;
-  stroke-dashoffset: 50;
-  -webkit-animation: Heart-A 1s cubic-bezier(0.4, 0, 1, 1);
-          animation: Heart-A 1s cubic-bezier(0.4, 0, 1, 1);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 /*# sourceMappingURL=main.css.map */

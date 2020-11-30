@@ -56,6 +56,7 @@ svg {
   width: 100%;
   pointer-events: none;
   transform: translateZ(0);
+  will-change: transform, animation;
 
   .animate__right-dot {
     opacity: 0;

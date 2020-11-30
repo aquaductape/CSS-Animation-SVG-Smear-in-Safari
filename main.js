@@ -1,4 +1,40 @@
-const svgDefs = `
+const cell = document.querySelector(".cell");
+const svgDefsEl = document.querySelector(".svg-defs");
+
+svgDefsEl.innerHTML = svgDefs();
+
+cell.addEventListener("click", () => {
+  cell.innerHTML = svgCross();
+});
+
+// To make it easier for you guys,
+// rather than polluting the html with svg markup,
+// I'm placing markup here as strings
+function svgCross() {
+  return `
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 26.4583 26.4583" version="1.1" id="svg8-cross-P1">
+  <g filter="url(#drop-shadow-filter)">
+    <g class="animate__left-dot" fill="url(#a-crossLeftDot-P1)">
+      <circle cx="6.4855" cy="19.9915" r="1.3368"></circle>
+    </g>
+    <g class="animate__right-dot" fill="url(#a-crossRightDot-P1)">
+      <circle r="1.3368" cy="19.9915" cx="19.9756"></circle>
+    </g>
+  </g>
+  <g fill="none" stroke-width="2.6458" stroke-linecap="round" filter="url(#drop-shadow-filter)">
+    <g stroke="url(#c-cross-P1)" transform="translate(0 -.0191)">
+      <path d="M 6.4855595,6.4855597 19.972772,19.972772" class="animate__right-line"></path>
+    </g>
+    <g stroke="url(#d-cross-P1)" transform="translate(0 -.0191)">
+      <path d="M 19.972772,6.4855597 6.4855597,19.972772" class="animate__left-line"></path>
+    </g>
+  </g>
+</svg>
+`;
+}
+
+function svgDefs() {
+  return `
 <svg xmlns="http://www.w3.org/2000/svg" class="defs-collection" height="0" width="0" viewBox="0 0 32 32">
     <defs>
     <filter id="drop-shadow-filter" height="100" width="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -80,33 +116,4 @@ const svgDefs = `
     <stop class="color-secondary-crossRightDot-P2" stop-color="#ffc300"></stop>
   </linearGradient></defs></svg>
 `;
-
-const svgCross = `
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 26.4583 26.4583" version="1.1" id="svg8-cross-P1">
-  <g filter="url(#drop-shadow-filter)">
-    <g class="animate__left-dot" fill="url(#a-crossLeftDot-P1)">
-      <circle cx="6.4855" cy="19.9915" r="1.3368"></circle>
-    </g>
-    <g class="animate__right-dot" fill="url(#a-crossRightDot-P1)">
-      <circle r="1.3368" cy="19.9915" cx="19.9756"></circle>
-    </g>
-  </g>
-  <g fill="none" stroke-width="2.6458" stroke-linecap="round" filter="url(#drop-shadow-filter)">
-    <g stroke="url(#c-cross-P1)" transform="translate(0 -.0191)">
-      <path d="M 6.4855595,6.4855597 19.972772,19.972772" class="animate__right-line"></path>
-    </g>
-    <g stroke="url(#d-cross-P1)" transform="translate(0 -.0191)">
-      <path d="M 19.972772,6.4855597 6.4855597,19.972772" class="animate__left-line"></path>
-    </g>
-  </g>
-</svg>
-`;
-
-const cell = document.querySelector(".cell");
-const svgDefsEl = document.querySelector(".svg-defs");
-
-svgDefsEl.innerHTML = svgDefs;
-
-cell.addEventListener("click", () => {
-  cell.innerHTML = svgCross;
-});
+}
